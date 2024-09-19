@@ -1,0 +1,56 @@
+.row {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.col-sm-12 {
+    flex: 1;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 200px;
+    text-align: center;
+    color: #ffffff !important;
+    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to left, #ff4d4d, #ff0000) !important;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+
+
+.card-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+   
+}
+
+.card-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff !important;
+}
+
+.delete-btn {
+    background-color: #dd7c7c !important;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
