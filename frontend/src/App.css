@@ -1,0 +1,93 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar-left {
+  margin-left: 20px;
+}
+
+.website-name {
+  color: white;
+  font-size: 1.8rem; /* Bigger font size for the website name */
+  margin: 0;
+}
+
+/* Navbar links */
+.navbar-right {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Space between links */
+  margin-right: 20px;
+}
+
+.navbar-right li {
+  display: inline;
+}
+
+.navbar-right a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+.navbar-right a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Navbar button styling */
+.navbar-right button {
+  background-color: #1a1a1a; /* Same as other buttons */
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.navbar-right button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar-right button:focus,
+.navbar-right button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Main content styles */
+.main-content {
+  margin-top: 80px; /* Adjust this value based on your navbar height */
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+  margin: 20px 0;
+}
