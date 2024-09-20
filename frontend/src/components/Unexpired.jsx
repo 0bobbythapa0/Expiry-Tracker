@@ -76,6 +76,7 @@ const Unexpired = () => {
           unexp.map((item, index) => (
             <Cards2
               key={index}
+              quantity={item.quantity}
               productName={item.productName}
               expiryDate={item.expiryDate}
               id={item._id}

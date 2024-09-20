@@ -11,13 +11,12 @@
 .card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    height: 200px;
+    height: 240px;
     text-align: center;
     color: #ffffff !important;
     width: 300px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding: 8px;
+    padding-top: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to left, #ff4d4d, #ff0000) !important;
     transition: transform 0.2s;

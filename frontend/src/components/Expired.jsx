@@ -76,6 +76,7 @@ const Expired = () => {
           expiredItems.map((item, index) => (
             <Cards1
               key={index}
+              quantity={item.quantity}
               productName={item.productName}
               expiryDate={item.expiryDate}
               id={item._id}

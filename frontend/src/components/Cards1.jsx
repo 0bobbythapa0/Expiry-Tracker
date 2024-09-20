@@ -1,7 +1,7 @@
 import React from 'react';
 import './Redcards.css'
 
-const Cards2 = ({ productName, expiryDate, id, onDelete }) => {
+const Cards2 = ({ productName, expiryDate,quantity, id, onDelete }) => {
   const handleDeleteClick = (e) => {
     e.preventDefault();
     onDelete(id); // Call the onDelete function passed from the parent component
@@ -13,7 +13,9 @@ const Cards2 = ({ productName, expiryDate, id, onDelete }) => {
         <div className="card m-1">
           <div className="card-body">
             <h5 className="card-title">{productName}</h5>
+            <p className="card-text">Quantity: {quantity}</p>
             <p className="card-text">
+              
               Item Expired on: {expiryDate}
             </p>
             <button className='delete-btn' onClick={handleDeleteClick}>

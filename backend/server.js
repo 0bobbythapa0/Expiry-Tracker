@@ -181,6 +181,7 @@ const User = mongoose.model('User', UserSchema);
 const ProductSchema = new mongoose.Schema({
   productName: { type: String, required: true },
   expiryDate: { type: String, required: true },
+  quantity: {type: Number, required: true},
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true } // Reference to the user
 });
 
@@ -247,12 +248,16 @@ app.post('/login', async (req, res) => {
 
 // Route to add a product for the logged-in user
 app.post('/addProduct', authMiddleware, async (req, res) => {
-  const { productName, expiryDate } = req.body;
+  const { productName, expiryDate, quantity } = req.body;
+
+  console.log(productName+" "+expiryDate+" "+quantity);
+  console.log(req.user.id);
 
   try {
     const result = await Product.create({
       productName,
       expiryDate,
+      quantity,
       user: req.user.id
     });
 

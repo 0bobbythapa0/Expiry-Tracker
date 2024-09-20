@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+ 
 }
 
 .App {
@@ -14,12 +15,14 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #0c783a; /* Dark background color */
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow // Add a bottom border */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .navbar-left {
@@ -27,7 +30,7 @@ body {
 }
 
 .website-name {
-  color: white;
+  color: white !important;
   font-size: 1.8rem; /* Bigger font size for the website name */
   margin: 0;
 }
@@ -60,7 +63,7 @@ body {
 
 /* Navbar button styling */
 .navbar-right button {
-  background-color: #1a1a1a; /* Same as other buttons */
+  background-color: #048e40; /* Same as other buttons */
   color: white;
   border: 1px solid transparent;
   border-radius: 8px;
@@ -83,7 +86,7 @@ body {
 
 /* Main content styles */
 .main-content {
-  margin-top: 80px; /* Adjust this value based on your navbar height */
+/* Adjust this value based on your navbar height */
   padding: 20px;
 }
 
