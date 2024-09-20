@@ -3,7 +3,10 @@
 
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Logins from '../Logins.json';
+import Lottie from 'lottie-react';
 import AuthContext from '../context/AuthContext'; // Import AuthContext
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -32,6 +35,10 @@ const Login = () => {
   };
 
   return (
+    <div className="main-container">
+      <div className='login-lottie'>
+        <Lottie animationData={Logins} />
+        </div>
     <div className="login-container">
       <h1>Log In</h1>
       <form onSubmit={handleLogin}>
@@ -55,6 +62,7 @@ const Login = () => {
         </div>
         <button type="submit">Log In</button>
       </form>
+    </div>
     </div>
   );
 };

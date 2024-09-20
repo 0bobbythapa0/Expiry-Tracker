@@ -1,6 +1,8 @@
-// 
 
 import React, { useState } from 'react';
+import addItem from '../addItem.json';
+import Lottie from 'lottie-react'
+import './AddItems.css';
 
 const AddItems = () => {
   const [productName, setProductName] = useState('');
@@ -60,7 +62,11 @@ const AddItems = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="add-items">
+      <div className="add-items-lottie">
+        <Lottie animationData={addItem} />
+      </div>
+    <form onSubmit={handleSubmit} >
       <h3>Add Item</h3>
 
       <div className="mb-3">
@@ -105,6 +111,7 @@ const AddItems = () => {
         </div>
       )}
     </form>
+    </div>
   );
 };
 

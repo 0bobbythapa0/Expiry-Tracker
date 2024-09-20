@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Cards2 from './Cards2';
+import Cards1 from './Cards1';
+import './Expired1.css';
 
 const Expired = () => {
   const [expiredItems, setExpiredItems] = useState([]); // State for expired items
@@ -66,14 +67,14 @@ const Expired = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Expired Items</h1>
       {errorMessage && <p className="alert alert-danger">{errorMessage}</p>}
-
+      <div className='items'>
       {
         expiredItems.length > 0 ? (
           expiredItems.map((item, index) => (
-            <Cards2
+            <Cards1
               key={index}
               productName={item.productName}
               expiryDate={item.expiryDate}
@@ -85,6 +86,7 @@ const Expired = () => {
           <p>No expired items found.</p>
         )
       }
+    </div>
     </div>
   );
 };

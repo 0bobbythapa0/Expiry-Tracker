@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cards.css'
 
 const Cards2 = ({ productName, expiryDate, id, onDelete }) => {
   const handleDeleteClick = (e) => {
@@ -9,19 +10,22 @@ const Cards2 = ({ productName, expiryDate, id, onDelete }) => {
   return (
     <div className="row">
       <div className="col-sm-12">
-        <div className="card m-1">
+        <div className="cards m-1">
           <div className="card-body">
             <h5 className="card-title">{productName}</h5>
             <p className="card-text">
               Date of Expiry: {expiryDate}
             </p>
-            <a href="#" className="btn btn-danger" onClick={handleDeleteClick}>
+            <button className='delete-btns' onClick={handleDeleteClick}>
+            
               DELETE
-            </a>
+            </button>
           </div>
         </div>
       </div>
     </div>
+            
+         
   );
 };
 

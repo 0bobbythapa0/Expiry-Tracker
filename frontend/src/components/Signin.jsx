@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import Logins from '../Logins.json';
+import Lottie from 'lottie-react';
+// import AuthContext from '../context/AuthContext'; // Import AuthContext
+import './Signin.css';
 
 const SignIn = () => {
   const [username, setUsername] = useState('');
@@ -33,7 +37,11 @@ const SignIn = () => {
   };
 
   return (
-    <section>
+    <div className="main-container">
+      <div className='login-lottie'>
+        <Lottie animationData={Logins} />
+        </div>
+    <div className="login-container">
       <h1>Sign In</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -68,7 +76,8 @@ const SignIn = () => {
         </div>
         <button type="submit">Sign In</button>
       </form>
-    </section>
+      </div>
+      </div>
   );
 };
 

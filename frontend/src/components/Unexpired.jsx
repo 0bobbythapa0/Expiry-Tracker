@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Cards1 from './Cards1';
+import Cards2 from './Cards2';
+import './Expired.css'
 
 const Unexpired = () => {
   const [unexp, setUnExp] = useState([]); // Initialize with an empty array
@@ -66,14 +67,14 @@ const Unexpired = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Unexpired Items</h1>
       {errorMessage && <p className="alert alert-danger">{errorMessage}</p>}
-
+    <div className='items'>
       {
         unexp.length > 0 ? (
           unexp.map((item, index) => (
-            <Cards1
+            <Cards2
               key={index}
               productName={item.productName}
               expiryDate={item.expiryDate}
@@ -85,6 +86,7 @@ const Unexpired = () => {
           <p>No unexpired items found.</p>
         )
       }
+      </div>
     </div>
   );
 };
